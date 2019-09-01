@@ -19,12 +19,15 @@ export default {
 <style lang="css">
 
 body {
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+h1,h2,h3{
+  font-family: 'Titillium Web', sans-serif;
+}
 #view {
-  height: 100vh;
   background-color: #005288;
 }
 

@@ -30,7 +30,8 @@ li {
     transition: 0.1s all ease-in;
     text-align: right;
     font-family:cursive;
-    border: solid, 5px, yellow
+    border: solid, 5px, yellow;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   li:hover {
