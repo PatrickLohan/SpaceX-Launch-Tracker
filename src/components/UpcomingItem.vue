@@ -22,7 +22,7 @@ li {
     width: 50vw;
     list-style-type: none;
     display: block;
-    background: #000;
+    background: #005288;
     font-size: 16px;
     margin: 10px 0;
     padding: 10px;
@@ -34,7 +34,7 @@ li {
   }
 
   li:hover {
-    background: #dbe8ff;
+    background: #a7a9ac;
     color: #222;
   }
 </style>

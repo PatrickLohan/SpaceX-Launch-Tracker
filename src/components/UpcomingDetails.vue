@@ -5,7 +5,8 @@
       <div id="flexWrapper">
         <div class="upcomings-details">
           <p><span>Mission: </span>{{upcomings.mission_name}}</p>
-          <p><span>Date: </span>{{upcomings.launch_date_utc}}</p>
+          <p><span>Date: </span>{{upcomings.launch_date_utc | format}}</p>
+          <p><span>Countdown: </span>{{upcomings.launch_date_utc | fromNow}} days</p>
           <p><span>Rocket: </span>{{upcomings.rocket.rocket_name}}</p>
           <p><span>Details: </span>{{upcomings.details}}</p>
         </div>
@@ -15,18 +16,22 @@
 </template>
 
 <script>
+
 export default {
   name: 'upcoming-details',
   props: ['upcomings']
 }
+
 </script>
+
+
 
 <style lang="css" scoped>
 span {
-  color: #a7a9ac;
+  color: #22272b;
 }
 .upcomings-details {
-  color: #005288;
+  color: #a7a9ac;
   font-variant: small-caps;
 }
 #upcomingDetails {
@@ -34,8 +39,8 @@ span {
   height: 50vh;
   width: 50vw;
   padding: 10px;
-  border: 1px solid yellow;
-  margin-right:10px;
+  border: 1px solid #a7a9ac;
+  margin: 15px 10px 0 0;
 }
 
 #detailWrapper {
@@ -64,7 +69,7 @@ span {
 }
 
 h2 {
-  color: yellow;
+  color: #FFF;
   margin: 10px 0 20px;
   padding: 0;
 }
