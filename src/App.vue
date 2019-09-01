@@ -2,6 +2,7 @@
   <div id="view">
     <Header/>
     <UpcomingLaunches/>
+
   </div>
 </template>
 

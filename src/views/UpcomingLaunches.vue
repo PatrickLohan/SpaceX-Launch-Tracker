@@ -19,7 +19,7 @@ export default {
   },
   mounted() {
     fetch(
-        'https://api.spacexdata.com/v3/launches/upcoming?filter=flight_number,mission_name,rocket/rocket_name,links,launch_date_utc'
+        'https://api.spacexdata.com/v3/launches/upcoming?filter=flight_number,mission_name,details,rocket/rocket_name,links,launch_date_utc'
       )
       .then(response => response.json())
       .then((data) => {
