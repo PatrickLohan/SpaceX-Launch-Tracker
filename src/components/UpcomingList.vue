@@ -1,8 +1,8 @@
 <template lang="html">
-  <div v-if="launches">
+  <div v-if="upcomings">
     <ul>
-      <UpcomingItem v-for="(launch, index) in launches" :key="index"
-      :launch="launch" />
+      <UpcomingItem v-for="(upcoming, index) in upcomings" :key="index"
+      :upcoming="upcoming" />
     </ul>
   </div>
 </template>
@@ -12,7 +12,7 @@ import UpcomingItem from '@/components/UpcomingItem'
 
 export default {
   name: 'upcoming-list',
-  props: ['launches'],
+  props: ['upcomings'],
   components: {
     UpcomingItem
   }

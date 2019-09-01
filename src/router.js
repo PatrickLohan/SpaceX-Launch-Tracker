@@ -11,12 +11,14 @@ export const router = new Router({
     {
       path: '/',
       name: 'upcomings',
-      component: UpcomingLaunches
+      component: UpcomingLaunches,
+      props: true
     },
     {
     path: '/past',
     name: 'past',
-    component: PastLaunches
+    component: PastLaunches,
+    props: true
     }
   ]
 })

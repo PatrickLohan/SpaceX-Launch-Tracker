@@ -1,21 +1,26 @@
 <template lang="html">
 <div v-if="upcomings" id="view">
   <UpcomingList :upcomings="upcomings"/>
+  <UpcomingDetails v-if="selectedLaunch" :film="selectedLaunch" />
 </div>
 </template>
 
 <script>
 import UpcomingList from '@/components/UpcomingList'
+import UpcomingDetails from '@/components/UpcomingDetails'
+import {eventBus} from '@/main.js'
 
 export default {
   name: 'upcoming-view',
   data() {
     return {
       upcomings: [],
+      selectedLaunch: null
     }
   },
   components: {
-    UpcomingList
+    UpcomingList,
+    UpcomingDetails
   },
   mounted() {
     fetch(
@@ -26,6 +31,9 @@ export default {
         this.upcomings = data.sort((a, b) => {
           return a.launch_date_utc - b.launch_date_utc
         })
+      })
+      eventBus.$on('launch-selected', (launch) => {
+        this.selectedLaunch = launch
       })
   }
 }

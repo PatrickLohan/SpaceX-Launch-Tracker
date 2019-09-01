@@ -1,20 +1,17 @@
 <template lang="html">
   <div id="view">
     <Header/>
-    <UpcomingLaunches/>
-
+    <router-view id="view"/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
-import UpcomingLaunches from '@/views/UpcomingLaunches'
 
 export default {
   name: 'app',
   components: {
-    Header,
-    UpcomingLaunches
+    Header
   }
 }
 </script>

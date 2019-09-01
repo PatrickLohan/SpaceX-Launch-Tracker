@@ -1,15 +1,13 @@
 <template lang="html">
-  <li v-on:click="handleClick">{{launch.mission_name}}</li>
+  <li v-on:click="handleClick">{{upcomings.mission_name}}</li>
 </template>
 
 <script>
-import {
-  eventBus
-} from '@/main.js'
+import {eventBus} from '@/main.js'
 
 export default {
   name: 'list-item',
-  props: ['launch'],
+  props: ['upcomings'],
   methods: {
     handleClick() {
       eventBus.$emit('launch-selected', this.launch)
@@ -17,6 +15,8 @@ export default {
   }
 }
 </script>
+
+<style lang="css" scoped>
 li {
     color:white;
     width: 40vw;
@@ -37,5 +37,4 @@ li {
     background: #dbe8ff;
     color: #222;
   }
-<style lang="css" scoped>
 </style>
