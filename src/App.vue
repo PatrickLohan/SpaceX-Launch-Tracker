@@ -17,8 +17,21 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+body {
+  margin: 0;
+}
+
+html {
+  background: url(assets/tesla_starman.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #view {
-  background-color: black;
   height: 100vh;
 }
+
 </style>

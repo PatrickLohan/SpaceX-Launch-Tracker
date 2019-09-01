@@ -10,7 +10,7 @@ export default {
   props: ['upcomings'],
   methods: {
     handleClick() {
-      eventBus.$emit('launch-selected', this.launch)
+      eventBus.$emit('upcoming-selected', this.upcomings)
     }
   }
 }
@@ -19,7 +19,7 @@ export default {
 <style lang="css" scoped>
 li {
     color:white;
-    width: 40vw;
+    width: 50vw;
     list-style-type: none;
     display: block;
     background: #000;
@@ -28,7 +28,7 @@ li {
     padding: 10px;
     cursor: pointer;
     transition: 0.1s all ease-in;
-    text-align: left;
+    text-align: right;
     font-family:cursive;
     border: solid, 5px, yellow
   }

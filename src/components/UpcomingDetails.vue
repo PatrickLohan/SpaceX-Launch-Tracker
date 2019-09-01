@@ -4,10 +4,10 @@
       <h2>Flight {{upcomings.flight_number}}</h2>
       <div id="flexWrapper">
         <div class="upcomings-details">
-          <p><span>Mission</span>{{upcomings.mission_name}}</p>
-          <p><span>Date</span>{{upcomings.launch_date_utc}}</p>
-          <p><span>Rocket</span>{{upcomings.rocket.rocket_name}}</p>
-          <p><span>Details</span>{{upcomings.details}}</p>
+          <p><span>Mission: </span>{{upcomings.mission_name}}</p>
+          <p><span>Date: </span>{{upcomings.launch_date_utc}}</p>
+          <p><span>Rocket: </span>{{upcomings.rocket.rocket_name}}</p>
+          <p><span>Details: </span>{{upcomings.details}}</p>
         </div>
       </div>
     </div>
@@ -22,21 +22,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
-a {
-  color: yellow;
-  text-decoration: none;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 2em;
+span {
+  color: #a7a9ac;
 }
-.film-details {
-  color: yellow;
+.upcomings-details {
+  color: #005288;
   font-variant: small-caps;
 }
-#filmDetail {
+#upcomingDetails {
   box-sizing: border-box;
   height: 50vh;
-  width: 25vw;
+  width: 50vw;
   padding: 10px;
   border: 1px solid yellow;
   margin-right:10px;
@@ -52,6 +48,7 @@ a {
 #flexWrapper {
   display: flex;
   justify-content: space-between;
+  align-content: flex-start;
 }
 
 #left, #right {

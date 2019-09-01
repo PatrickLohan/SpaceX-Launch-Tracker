@@ -1,7 +1,7 @@
 <template lang="html">
 <div v-if="upcomings" id="view">
   <UpcomingList :upcomings="upcomings"/>
-  <UpcomingDetails v-if="selectedLaunch" :film="selectedLaunch" />
+  <UpcomingDetails v-if="selectedUpcoming" :upcomings="selectedUpcoming" />
 </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       upcomings: [],
-      selectedLaunch: null
+      selectedUpcoming: null
     }
   },
   components: {
@@ -32,8 +32,8 @@ export default {
           return a.launch_date_utc - b.launch_date_utc
         })
       })
-      eventBus.$on('launch-selected', (launch) => {
-        this.selectedLaunch = launch
+      eventBus.$on('upcoming-selected', (upcoming) => {
+        this.selectedUpcoming = upcoming
       })
   }
 }
