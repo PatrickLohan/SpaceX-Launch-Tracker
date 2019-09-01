@@ -36,7 +36,7 @@ span {
 }
 #upcomingDetails {
   box-sizing: border-box;
-  height: 50vh;
+  height: 70vh;
   width: 50vw;
   padding: 10px;
   border: 1px solid #a7a9ac;
