@@ -1,6 +1,6 @@
 <template lang="html">
 <div v-if="upcomings" id="view">
-  <UpcomingLaunches :upcomings="upcomings"/>
+  <UpcomingList :upcomings="upcomings"/>
 </div>
 </template>
 
@@ -8,26 +8,23 @@
 import UpcomingList from '@/components/UpcomingList'
 
 export default {
-  name: 'upcoming-view'
+  name: 'upcoming-view',
   data() {
     return {
       upcomings: [],
     }
-  }
+  },
   components: {
     UpcomingList
-  }
+  },
   mounted() {
-    fetch('https://api.spacexdata.com/v3/launches/upcoming')
+    fetch(
+        'https://api.spacexdata.com/v3/launches/upcoming?filter=flight_number,mission_name,rocket/rocket_name,links,launch_date_utc'
+      )
       .then(response => response.json())
       .then((data) => {
-        // for (let i = 0; i < data.length; i++) {
-        //   this.upcomings.push(data[i]);
-        //   console.log(data[i]);
-        // }
         this.upcomings = data.sort((a, b) => {
-          console.log('test');
-          return a.launch_date_unix - b.launch_date_unix
+          return a.launch_date_utc - b.launch_date_utc
         })
       })
   }
