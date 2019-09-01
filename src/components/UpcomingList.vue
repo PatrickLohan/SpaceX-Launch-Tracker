@@ -20,7 +20,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-ul {
-  background-color: white;
-}
 </style>
