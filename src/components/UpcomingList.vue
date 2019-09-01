@@ -2,7 +2,7 @@
   <div v-if="upcomings">
     <ul>
       <UpcomingItem v-for="(upcoming, index) in upcomings" :key="index"
-      :upcoming="upcoming" />
+      :upcomings="upcoming" />
     </ul>
   </div>
 </template>
@@ -20,4 +20,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+ul {
+  background-color: white;
+}
 </style>

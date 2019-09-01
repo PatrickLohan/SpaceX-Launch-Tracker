@@ -1,5 +1,5 @@
 <template lang="html">
-  <li v-on:click="handleClick">{{upcomings.mission_name}}</li>
+  <li v-on:click="handleClick">{{upcomings.flight_number}}:{{upcomings.mission_name}}</li>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ li {
     padding: 10px;
     cursor: pointer;
     transition: 0.1s all ease-in;
-    text-align: center;
+    text-align: left;
     font-family:cursive;
     border: solid, 5px, yellow
   }
