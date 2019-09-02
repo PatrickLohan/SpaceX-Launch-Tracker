@@ -69,7 +69,7 @@ span {
 }
 
 h2 {
-  color: #FFF;
+  color: #a7a9ac;
   margin: 10px 0 20px;
   padding: 0;
 }
