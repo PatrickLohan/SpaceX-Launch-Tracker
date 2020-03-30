@@ -15,4 +15,7 @@ export default {
   display: flex;
   justify-content: center;
 }
+img{
+  width: 100vw;
+}
 </style>
