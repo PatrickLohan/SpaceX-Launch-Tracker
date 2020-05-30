@@ -2,7 +2,8 @@
   <div v-if="upcomings">
     <ul>
       <UpcomingItem v-for="(upcoming, index) in upcomings" :key="index"
-      :upcomings="upcoming" />
+				:upcomings="upcoming"
+			></UpcomingItem>
     </ul>
   </div>
 </template>
