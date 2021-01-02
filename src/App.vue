@@ -30,6 +30,7 @@ h1,h2,h3{
 #view {
   background-color: #005288;
   width: 100vw;
+  height: 80vh;
 }
 
 </style>

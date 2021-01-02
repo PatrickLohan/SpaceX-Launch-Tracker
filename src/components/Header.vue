@@ -17,5 +17,6 @@ export default {
 }
 img{
   width: 100vw;
+  height: 20vh;
 }
 </style>
